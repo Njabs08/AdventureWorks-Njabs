@@ -1,7 +1,7 @@
 /*
 Name: Njabulo P Tshuma 
 Course: IT143
-Assignment: AdventureWorks – Create Answers
+Assignment: AdventureWorks â€“ Create Answers
 Date: 2026/03/24
 
 Description:
@@ -14,11 +14,10 @@ joins, aggregations, and filtering techniques.
 USE AdventureWorks2022;
 GO
 
-/* =========================================================
-   Q1 — Marginal Complexity
+/* 
+   Q1 â€” Marginal Complexity
    Question: What are the top ten most expensive products based on list price?
-   Author: [Your Name]
-   ========================================================= */
+   Author: Me  */
 
 -- Retrieve the top 10 most expensive products
 SELECT TOP 10
@@ -28,11 +27,10 @@ FROM Production.Product
 ORDER BY ListPrice DESC;  -- Highest price first
 
 
-/* =========================================================
-   Q2 — Marginal Complexity
+/* 
+   Q2 â€” Marginal Complexity
    Question: Which employees have the highest recorded vacation hours?
-   Author: []
-   ========================================================= */
+   Author: Me */
 
 -- List employees ordered by highest vacation hours
 SELECT
@@ -42,12 +40,11 @@ FROM HumanResources.Employee
 ORDER BY VacationHours DESC;
 
 
-/* =========================================================
-   Q3 — Moderate Complexity
+/* 
+   Q3 â€” Moderate Complexity
    Question: Calculate net revenue (list price - standard cost)
              and identify the five products with the highest net revenue.
-   Author: []
-   ========================================================= */
+   Author: Another Student */
 
 -- Calculate profit per product and return top 5
 SELECT TOP 5
@@ -59,11 +56,10 @@ FROM Production.Product
 ORDER BY NetRevenue DESC;
 
 
-/* =========================================================
-   Q4 — Moderate Complexity
+/*
+   Q4 â€” Moderate Complexity
    Question: Find total sales quantity and revenue by product category.
-   Author: []
-   ========================================================= */
+   Author: Another Student */
 
 -- Aggregate sales by product category
 SELECT
@@ -81,12 +77,11 @@ GROUP BY pc.Name
 ORDER BY TotalRevenue DESC;
 
 
-/* =========================================================
-   Q5 — Increased Complexity
+/*
+   Q5 â€” Increased Complexity
    Question: Monthly road bike sales in 2013 grouped by region,
              including quantity, price, and estimated profit.
-   Author: []
-   ========================================================= */
+   Author: Another Student */
 
 -- Analyze road bike sales trends by region and month
 SELECT
@@ -123,13 +118,12 @@ ORDER BY
     OrderMonth;
 
 
-/* =========================================================
-   Q6 — Increased Complexity
+/*
+   Q6 â€” Increased Complexity
    Question: Salesperson performance by quarter in 2012,
              including total sales, number of orders,
              and average revenue per order.
-   Author: []
-   ========================================================= */
+   Author:Another Student */
 
 -- Evaluate employee sales performance
 SELECT
@@ -150,11 +144,10 @@ ORDER BY
     Quarter;
 
 
-/* =========================================================
-   Q7 — Metadata Question
+/*
+   Q7 â€” Metadata Question
    Question: List all tables containing a column named ProductID.
-   Author: []
-   ========================================================= */
+   Author: Another Student*/
 
 -- Find all tables with ProductID column
 SELECT
@@ -164,12 +157,11 @@ FROM INFORMATION_SCHEMA.COLUMNS
 WHERE COLUMN_NAME = 'ProductID';
 
 
-/* =========================================================
-   Q8 — Metadata Question
+/* 
+   Q8 â€” Metadata Question
    Question: Identify all columns related to customer data
              and the tables they belong to.
-   Author: []
-   ========================================================= */
+   Author: Another student */
 
 -- Find columns containing the word "Customer"
 SELECT
